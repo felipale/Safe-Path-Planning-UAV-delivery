@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Supaero/Stage/Codigo3/Eigen"
+            ],
+            "defines": [],
+            "compilerPath": "C:/msys64/ucrt64/bin/g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "includePath": [
+    "${workspaceFolder}/Codigo3", 
+    "${workspaceFolder}/Codigo3/Eigen",
+    "${workspaceFolder}/Codigo3/Eigen/src"
+    ],
+    "version": 4
+}

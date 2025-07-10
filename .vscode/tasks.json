@@ -1,0 +1,79 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build Debug",
+      "type": "shell",
+      "command": "C:/msys64/ucrt64/bin/g++.exe",
+      "args": [
+        "-g",
+        "Model.cpp",
+        "-o",
+        "your_output_debug.exe",
+        "-IC:/Supaero/Stage/Codigo3"
+      ],
+      "group": "build"
+    },
+    {
+      "label": "build Release",
+      "type": "shell",
+      "command": "C:/msys64/ucrt64/bin/g++.exe",
+      "args": [
+        "-O3",                   // ativar otimizações agressivas
+        "-march=native",         // usar instruções do seu processador
+        "-DNDEBUG",              // desativa assert()
+        "Model.cpp",
+        "-o",
+        "your_output_release.exe",
+        "-IC:/Supaero/Stage/Codigo3"
+      ],
+      "group": "build"
+    },
+    {
+      "type": "cppbuild",
+      "label": "C/C++: g++.exe générer le fichier actif (Debug)",
+      "command": "C:/msys64/ucrt64/bin/g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}_dbg.exe",
+        "-IC:/Supaero/Stage/Codigo3"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Tâche générée par le débogueur."
+    },
+    {
+      "type": "cppbuild",
+      "label": "C/C++: g++.exe générer le fichier ativo (Release)",
+      "command": "C:/msys64/ucrt64/bin/g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-O3",
+        "-march=native",
+        "-DNDEBUG",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}_rel.exe",
+        "-IC:/Supaero/Stage/Codigo3"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
+    }
+  ]
+}
